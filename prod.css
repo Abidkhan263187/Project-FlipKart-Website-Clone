@@ -1,0 +1,265 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#MainCard2{
+  /* border: 1px solid; */
+  /* width: 50%; */
+  height: 500px;
+  display: flex;
+}
+
+.mainprod{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.mainprod >div{
+/* border: 1px solid; */
+  /* width: 50%; */
+}
+p{
+  color: gray;
+  font-size: smaller;
+}
+.prodassure{
+   width: 70px;
+  /* margin-top: 10px; */
+  margin-top: -10px;
+}
+.pdiv6p1{
+  display: flex;
+}
+.prodImg{
+  width: 100%;
+  height: 300px;
+}
+.pdiv6p1 img{
+width: 3%;
+height: 25px;
+object-fit: cover;
+margin-right: 10px;
+  /* margin-top: 10px; */
+}
+#proddestwo{
+  margin-top: 30px;
+}
+
+.pdiv4{
+  display: flex;
+  /* border: 1px solid; */
+  width: 28%;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin: 10px 0px 50px 0px;
+  /* margin-top: -30px; */
+}
+
+.prodprice{
+  font-size: x-large;
+}
+.pdiv5{
+  /* border: 1px solid; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 55%;
+  /* margin-top: -30px; */
+}
+.pdivp3{
+  margin: 10px;
+  font-weight: 600;
+  color: green;
+}
+.pdiv6h4{
+  margin: 20px 0px;
+}
+.pdiv6p1 p,img{
+  margin-top: 15px;
+}
+.proddesone{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  align-items: center;
+  margin-top: 30px;
+
+}
+
+.buttonproddiv button{
+  font-weight: 600;
+  background-color: #ff9f00;
+  padding: 10px;
+  width: 55%;
+  border: none;
+  color: white;
+  margin-bottom: 30px;
+}
+.buttonproddiv button:hover{
+  background-color: #2874f0;
+}
+.buttonproddiv{
+  display: flex;
+  width: 80%;
+  gap: 10px;
+  justify-content: space-between;
+  /* border: 1px solid; */
+ 
+}
+.pdiv1{
+  margin: 10px 0px;
+}
+.prodName{
+  margin: 5px 0px;
+}
+
+/* navbar start  */
+
+nav{
+  background-color: #2874f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+}
+.logo
+{
+  position: relative;
+  padding: 2px 20px 0px 5px;
+}
+.search
+{
+  background-color: white;
+  padding: 8px;
+  width: 400px;
+  margin: 0px 10px;
+  display:flex;
+  justify-content: space-between;
+  color: #2874f0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 2px;
+}
+.search input
+{
+  width: 93%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+.loginbtn
+{
+  padding: 7px 40px;
+  background-color: white;
+  border: none;
+  outline: none;
+  color:#2874f0;
+  font-size: 15px;
+  font-weight: 550;
+}
+.Navlink
+{
+  margin: 0px 20px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+.Navlinka
+{
+  margin: 0px 20px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+.Navlink i{
+  font-size: 15px;
+}
+
+/* nav bar end   */
+
+
+/* info and footer start  */
+
+
+
+
+/* Infor styling start  an footer*/
+.abidfst{
+  background-color: white;
+  color: #706e6e;
+  margin: 2% 0%;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.abidfst h1,h2{
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.info{
+  font-size: 13px;
+  padding-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer{
+  background-color: #172337;
+  color: white;
+  padding:15px 30px 0px 30px;
+  
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+.sndLastFooter h6{
+  color: #878787;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.sndLastFooter > div{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 100;
+}
+
+.sndLastFooter a{
+  color: white;
+  line-height: 25px;
+  text-decoration: none;
+}
+
+.sndLastFooter p{
+  margin: 0;
+  font-size: .96em;
+  line-height: 1.2rem;
+}
+
+footer i{
+  color: gold;
+}
+
+footer span{
+  font-size: 10px;
+  cursor: pointer;
+}
+.abidlastrow{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+#hr{
+border:1px solid;
+color: rgb(136, 133, 133);
+
+}
