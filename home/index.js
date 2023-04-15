@@ -3,8 +3,8 @@
 // let nav=document.getElementById("navbar");
 // nav.innerHTML=navbar()
 let sildeimages = [
-
-    "https://raw.githubusercontent.com/Abidkhan263187/Project-FlipKart-Website-Clone/home_products/home/images/g54.jpg",
+    
+    // "https://raw.githubusercontent.com/Abidkhan263187/Project-FlipKart-Website-Clone/home_products/home/images/g54.jpg",
     "https://assets.ajio.com/cms/AJIO/WEB/11042023-UHP-D-Main-P4-LevisSpykar-Min40.jpg",
     // "https://cdn.fcglcdn.com/brainbees/images/cattemplate/summer_desktop_essentials_200323_01.jpg",
     "https://cdn.fcglcdn.com/brainbees/images/cattemplate//summer_desktop_210323_96.jpg",

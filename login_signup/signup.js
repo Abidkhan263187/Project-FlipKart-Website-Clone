@@ -34,7 +34,7 @@ users.push(user);
 localStorage.setItem('users', JSON.stringify(users));
 alert('Account created successfully!');
 // Redirect the user to the dashboard or home page
-window.location.href = 'signin.html';
+window.location.href = '../home/index.html';
 }
 }
 
