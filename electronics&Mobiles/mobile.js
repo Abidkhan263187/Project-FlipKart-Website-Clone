@@ -14,7 +14,7 @@ import {footer,footer2} from "../footer/footer.js";
 
  
 let pv = localStorage.getItem("prod-Key")
-var url = `https://myjson.onrender.com` + `/${pv}`
+var url = `https://myjson.onrender.com` + `/${pv}`+`?_page=1&_limit=4`
 
 
 async function geturl(url) {
@@ -52,7 +52,7 @@ function display(mobilesArray) {
             id,
             img,
             price,
-            dis,
+            discount,
             f1, f2, f3, f4, f5, f6
 
         }) => {
@@ -133,7 +133,7 @@ function display(mobilesArray) {
             
             let disInfo = document.createElement("p");
             disInfo.setAttribute("class", "disInfo")
-            disInfo.textContent = dis;
+            disInfo.textContent = discount;
             let off=document.createElement("p");
             off.textContent="%Off"
             off.setAttribute("class","freeP")
@@ -280,3 +280,52 @@ function found(){
     }
 
 }
+
+
+// pagination part 
+
+let page=1;
+let pageno=document.getElementById("pageno");
+pageno.textContent=page;
+let prevbtn=document.getElementById("prev");
+
+prevbtn.addEventListener("click",()=>{
+  prev()
+})
+
+let nextbtn=document.getElementById("next");
+
+nextbtn.addEventListener("click",()=>{
+  next()
+})
+
+
+function prev(){
+
+    if(page==1) return;
+    page--;
+    pageno.textContent=page
+    fetchProductpage(`https://myjson.onrender.com` + `/${pv}`+`?_page=${page}&_limit=4`)
+  
+}
+
+function next(){
+
+page++;
+    console.log(page)
+    pageno.textContent=page
+    fetchProductpage(`https://myjson.onrender.com` + `/${pv}`+`?_page=${page}&_limit=4`)
+}
+
+async function fetchProductpage(url){
+    try {
+        let fetchData = await geturl(url)
+        // console.log(fetchData)
+        display(fetchData)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+

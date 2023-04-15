@@ -196,9 +196,7 @@ justify-content: space-around;
     width: 60%;
     align-items: center;
 }
-.cardB{
-    /* border: 1px solid; */
-}
+
 .cardAchildb{
     /* border: 1px solid; */
     height: 100%;
@@ -481,8 +479,43 @@ margin-top: 5px;
 
 
 
-
-
+/* pagging part  */
+#pageingBtn{
+    /* border: 1px solid; */
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-between;
+    align-items: center;
+    /* margin:  0px 40px 0px; */
+    width: 20%;
+    margin: 30px  auto;
+}
+#prev{
+width: 40%;
+padding: 5px;
+border: none;
+border-radius: 5px;
+background-color:#ff9f00;
+color: white;
+font-weight: 800;
+font-size: large;
+}
+#next{
+    width: 40%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color:#ff9f00;
+    color: white;
+    font-weight: 800;
+    font-size: large;
+}
+#next:hover{
+    background-color: #2874f0;
+}
+#prev:hover{
+    background-color: #2874f0;
+}
 
 
 
