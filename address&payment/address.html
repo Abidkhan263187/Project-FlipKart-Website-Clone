@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Address Detail Page</title>
+    <link rel="icon" href="https://www.indianbodybuilding.co.in/products/wp-content/uploads/2015/08/Flipkart-Logo.png">
+    <script
+      src="https://kit.fontawesome.com/673d24dcfe.js"
+      crossorigin="anonymous"
+    ></script>
+<style>
+   *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+  body {
+    cursor: pointer;
+  }
+  #cart {
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+  }
+  #leftcart {
+    flex: 7;
+    height: 96%;
+    margin: 1%;
+    padding: 20px;
+    padding-top: 0%;
+    box-shadow: rgba(26, 28, 29, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+  #rightcart {
+    flex: 3;
+    height: 96%;
+    margin: 1%;
+    padding: 10px;
+    box-shadow: rgba(37, 38, 39, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    /* border: 1px solid red; */
+  }
+  #cartlength {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 2px solid rgb(202, 195, 195);
+  }
+  #box1 {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 200px;
+    border-bottom: 2px solid rgb(212, 201, 201);
+  }
+  #box11 {
+    width: 25%;
+    padding: 10px;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #box11 > img {
+    width: 65%;
+    max-height: 150px;
+    margin-left: 17%;
+    margin-bottom: 5px;
+    border: 1px solid rgb(221, 208, 208);
+  }
+  #box12 {
+    width: 74%;
+    padding: 10px;
+    margin: 1%;
+  }
+  #cartline1 {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+  #cartline1 > div {
+    margin-right: 20px;
+  }
+  #cartline2 {
+    display: flex;
+    margin-top: 10px;
+  }
+  #cartline2 > div {
+    margin-right: 30px;
+    font-size: 14px;
+    font-weight: 525;
+  }
+  #cartline2 > div:hover {
+    color: #047bd5;
+  }
+  #cartline {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+  #cartline > div {
+    color: gray;
+    font-size: 14px;
+  }
+  #productName {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  #price {
+    font-size: 22px;
+    font-weight: 520;
+  }
+  #price2 {
+    font-size: 14px;
+    color: gray;
+    text-decoration: line-through;
+  }
+  #price3 {
+    color: green;
+    font-size: 15px;
+    font-weight: 520;
+  }
+  #flipass {
+    width: 70px;
+    margin-top: 10px;
+  }
+  #divinp {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 10px; */
+  }
+  #divinp > input {
+    width: 30px;
+    margin: 5px;
+    border: 1px solid rgb(202, 195, 195);
+    text-align: center;
+  }
+  #divinp > button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 1px solid rgb(207, 200, 200);
+    font-size: 15px;
+  
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  #rightcart1 {
+    width: 100%;
+    height: 50px;
+    /* border: 1px solid green; */
+    border-bottom: 2px solid rgb(212, 205, 205);
+    color: gray;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    font-weight: 550;
+  }
+  #rightcart2,
+  #rightcart3,
+  #rightcart4,
+  #rightcart5 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  #rightcart4 {
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(219, 208, 208);
+  }
+  #rightcart5 {
+    font-size: 17px;
+    font-weight: 550;
+    border-bottom: 2px solid rgb(214, 206, 206);
+    padding-bottom: 20px;
+  }
+  #rightcart6 {
+    font-size: 16px;
+    font-weight: 530;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    color: green;
+  }
+  #cartcontentbottom {
+    width: 100%;
+    height: 70px;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  #cartcontentbottom > button {
+    background-color: #fb641b;
+    width: 200px;
+    height: 50px;
+    border: 0;
+    border-radius: 2px;
+    color: white;
+    margin-right: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  /* ---------------------Navbar----------------- */
+/* nav bar start  */
+nav{
+    background-color: #2874f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+.logo
+{
+    position: relative;
+    padding: 2px 20px 0px 5px;
+}
+.search
+{
+  display: none;
+    
+}
+.search input
+{
+    width: 93%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+.loginbtn
+{
+  display: none;
+ 
+}
+.Navlink
+{
+    margin: 0px 20px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+.Navlinka
+{
+    margin: 0px 20px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+.Navlink i{
+    font-size: 15px;
+}
+
+/* nav end  */
+
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  
+
+  #flipkart-logo {
+    height: 100%;
+    width: 137px;
+    margin-left: 148px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+  }
+  #flipkart-logo > img {
+    height: 20.11px;
+    width: 75px;
+    margin-top: 10px;
+    margin-left: 3.8rem;
+  }
+  #flipkart-logo > a {
+    text-align: end;
+    font-size: 11px;
+    font-style: italic;
+    text-decoration: none;
+  }
+  #flipkart-logo > a {
+    color: white;
+  }
+  #flipkart-logo > a > span {
+    color: #ffe500;
+  }
+  #input-container > input {
+    height: 36px;
+    width: 525px;
+    margin-left: 1rem;
+    margin-top: 0.6rem;
+    border-radius: 2.5px;
+    border: none;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+  #search-btn {
+    height: 15px;
+    width: 40px;
+    background-color: white;
+    border: none;
+    letter-spacing: 0;
+    margin-left: -50px;
+    padding-top: 0;
+  }
+  #input-container > button {
+    color: #2874f0;
+  }
+  #login {
+    /* border: 1px solid red; */
+    width: 370px;
+    margin-left: 15rem;
+    margin-top: 15px;
+    display: flex;
+  }
+  #login > button {
+    height: 31.2px;
+    width: 200.5px;
+    background-color: #ffffff;
+    color: #2874f0;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 2px;
+  }
+  #more {
+    margin-top: 6px;
+    font-weight: bold;
+    /* border: 1px solid red; */
+    width: 200px;
+    margin-left: 50px;
+    color: white;
+  }
+  #cart {
+    margin-top: 6px;
+    /* font-weight: bold; */
+    margin-left: 30px;
+    /* color: white; */
+   padding-right: 35px;
+  }
+
+  .dropbtn {
+    background-color: #2874F0;
+    color:#ffffff;
+    padding: 5px;
+    margin-top:3.5%;
+    font-size: 15px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FAFAFA;
+    width: 260px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color: #6E6E6E;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+#add_qunt{
+    font-size: 20px;
+    
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #2874F0;}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+      .formA {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fcfcfc;
+        margin: 10px 0px;
+        color: rgb(71, 70, 70);
+        
+      }
+     
+      .formB>input{
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 8px 10px;
+        border: none;
+    
+        background-color:rgb(242,242,237);
+      }
+
+      #addA{
+        font-size: medium; 
+        box-shadow: rgba(64, 63, 63, 0.35) 0px 10px 25px;
+       width: 100%;
+       padding: 10px;
+       text-align: center;
+       background-color: #2874f0;
+       color: white;
+       margin: auto;
+        font-size: large;
+        /* margin-bottom: 20px; */
+        margin-top: 20px;
+      }
+      .inputContainerA {
+        width: 300px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 20px 40px;
+         background: #fcfcfc;
+         height: auto;
+         margin: auto;
+         margin-top: 50px;
+         box-shadow: rgba(80, 79, 79, 0.35) 0px 10px 25px;
+
+
+      }
+      #submitA {
+        display: block;
+        width: 60%;
+        margin: auto;
+     font-weight: 600;
+        color: #ffffff;
+        background-color: #fb641b;
+    margin-top: 10px;
+        padding: 10px;
+        border: none;
+        margin-bottom: 10px;
+      }
+      #submitA:hover {
+        background-color: #2874f0;
+      }
+      input{
+        border-radius: 3px;
+        width: 80%;
+        padding: 5px;
+      }
+
+      a{
+            text-decoration: none;
+            color: #000;
+        }
+        
+        #itemA{
+            background: #ed3e3e;
+            padding: 2px 8px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            
+            top: -10px;
+           
+        }
+        h1{
+          color: #4e4a4a;
+          
+        }
+    
+
+
+</style>
+</head>
+  <body>
+    <nav id="nav">
+      <!-- append navbar here -->
+    </nav>
+
+    <div id="cart">
+      <div id="leftcart">
+        <div id="addressDiv">
+            <div>
+                <h1 id="addA"> ADDRESS DETAILS</h1>
+              </div>
+          
+              <div class="inputContainerA">
+                <div class="formA">
+                  <h4>Contact Details</h4>
+                </div>
+                 <div class="formB"> 
+                  <input id="name" placeholder="Name" type="text">
+                </div>
+                <div class="formB"> 
+                  <input id="num" placeholder="Mobile No" type="number">
+                </div>
+                 
+                
+                <div class="formA">
+                  <h4> Address</h4>
+                </div>
+                  <div class="formB">
+                    <input id="pinA" placeholder="Pin Code" type="number">
+                  </div>
+               
+                
+                <div class="formB">
+                  <input id="home" placeholder="House No,Building" type="text">
+                </div>
+                <div class="formB">
+                  <input id="city" placeholder="Street,Area" type="text">
+                </div>
+                <div class="formB">
+                  <input id="town" placeholder="Town,Locality" type="text">
+                </div>
+                
+                <button id="submitA">ADD</button>
+              </div>
+        </div>
+        <div id="cartlength">Item To Buy (<span id="cartl1"></span>)</div>
+        <div id="cartcontent"></div>
+        <div id="cartcontentbottom">
+        
+        </div>
+      </div>
+      <div id="rightcart">
+        <div id="rightcart1">PRICE DETAILS</div>
+
+        <div id="rightcart2">
+          <div>Price</div>
+          <div id="a1"></div>
+        </div>
+
+        <div id="rightcart3">
+          <div>Discount</div>
+          <div id="a2" style="color: rgb(15, 116, 15); font-size: 15px"></div>
+        </div>
+
+        <div id="rightcart4">
+          <div>Delivery Charges</div>
+          <div id="a3" style="color: rgb(14, 138, 14); font-size: 15px">
+            Free
+          </div>
+        </div>
+
+        <div id="rightcart5">
+          <div>Total Amount</div>
+          <div id="a4"></div>
+        </div>
+
+        <div id="rightcart6">
+          You will save ₹<span id="a6"></span> on this order
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="module">
+    import navbar from "../navbar/navbar.js";
+
+let nav = document.getElementById("nav");
+nav.innerHTML = navbar()
+    var res = JSON.parse(localStorage.getItem("cart"))||[];
+
+
+
+console.log("res", res);
+
+let a1 = 0;
+let a2 = 0;
+let a3 = 0;
+let a4 = 0;
+displaydata();
+a2 = a1 - a4;
+displayvalue();
+function displayvalue() {
+  document.querySelector("#a1").innerHTML = "₹" + a1;
+  document.querySelector("#a2").textContent = "-" + "₹" + a2;
+  document.querySelector("#a6").textContent = a2;
+  document.querySelector("#a4").textContent = "₹" + a4;
+}
+
+function displaydata() {
+  document.querySelector("#cartcontent").innerHTML = null;
+  console.log(res);
+  document.querySelector("#cartl1").textContent = res.length;
+  res.map(function (data, hn) {
+    var div = document.createElement("div");
+    div.id = "box1";
+
+    var imgdiv = document.createElement("div");
+    imgdiv.id = "box11";
+
+    var image = document.createElement("img");
+    image.setAttribute("src", data.image_url);
+
+    var divinp = document.createElement("div");
+    divinp.id = "divinp";
+
+    var inp1 = document.createElement("input");
+    inp1.id = "inp";
+    inp1.type = "Number";
+    inp1.min = 1;
+    inp1.defaultValue = 1;
+
+    // var but1 = document.createElement("button");
+    // but1.addEventListener("click", minusinp);
+    // but1.id = "but1";
+    // but1.textContent = "-";
+
+    // var but2 = document.createElement("button");
+    // but2.addEventListener("click", plusinp);
+    // but2.id = "but2";
+    // but2.textContent = "+";
+
+    // divinp.append(but1, inp1, but2);
+
+    var textdiv = document.createElement("div");
+    textdiv.id = "box12";
+
+    var productName = document.createElement("div");
+    productName.id = "productName";
+        productName.textContent = data.name;
+
+
+    var cartline = document.createElement("div");
+    cartline.id = "cartline";
+
+    var seller = document.createElement("div");
+    seller.textContent = "FlipKart";
+
+    var replacee = document.createElement("div");
+    replacee.textContent = "7 Days Replacement Policy";
+
+    var cartline1 = document.createElement("div");
+    cartline1.id = "cartline1";
+
+    let a = +data.price;
+    let b = +data.mrp;
+
+    let c = Math.floor(((b - a) / b) * 100);
+
+    a4 = a4 + a;
+
+    var price = document.createElement("div");
+    price.id = "price";
+    price.textContent = "₹" + data.price;
+
+    a1 = a1 + b;
+    var price2 = document.createElement("div");
+    price2.id = "price2";
+    price2.textContent = "₹" + data.mrp;
+
+    var price3 = document.createElement("div");
+    price3.id = "price3";
+    price3.textContent = "42"+ " %" + "    off";
+
+    var assuer = document.createElement("img");
+    assuer.src = "https://www.adgully.com/img/800/68264_fl.png.jpg";
+    assuer.id = "flipass";
+
+    var cartline2 = document.createElement("div");
+    cartline2.setAttribute("id", "cartline2");
+
+    var save = document.createElement("div");
+    save.textContent = "SAVE FOR LATER";
+    save.addEventListener("click", function (event) {
+      addtocart(hn);
+    });
+
+    var remove = document.createElement("div");
+    remove.textContent = "REMOVE";
+    remove.addEventListener("click", function (event) {
+      deletefromcart(hn);
+    });
+    displayvalue();
+
+    cartline.append(seller, replacee);
+    cartline1.append(price, price2, price3);
+    cartline2.append(save, remove);
+    imgdiv.append(image, divinp);
+    textdiv.append(productName, cartline, cartline1, assuer, cartline2);
+    div.append(imgdiv, textdiv);
+    document.querySelector("#cartcontent").append(div);
+  });
+}
+function deletefromcart(hn) {
+  res.splice(hn, 1);
+  localStorage.setItem("cart", JSON.stringify(res));
+  alert("Item Removed From Cart");
+  a1 = 0;
+  a2 = 0;
+  a3 = 0;
+  a4 = 0;
+  displaydata();
+  a2 = a1 - a4;
+  displayvalue();
+}
+function addtocart(hn) {
+  res.splice(hn, 1);
+  localStorage.setItem("cart", JSON.stringify(res));
+  alert("Item Added to Wishlist");
+  displaydata();
+}
+// function minusinp() {
+//   var a = document.querySelector("#inp").value;
+//   var b = +a - 1;
+//   if (b <= 0) {
+//     b = 1;
+//   }
+//   document.querySelector("#inp").value = b;
+// }
+// function plusinp() {
+//   var a = document.querySelector("#inp").value;
+//   var b = +a + 1;
+//   document.querySelector("#inp").value = b;
+// }
+
+// function tocheckout() {
+//   localStorage.setItem("price", JSON.stringify(a4));
+//   window.location.href = "checkout.html";
+// }
+// var d = document.querySelector("#flipkart-logo");
+// d.addEventListener("click", function () {
+//   window.location.href = "index.html";
+// });
+// var a = document.querySelector("#more");
+// a.addEventListener("click", function () {
+//   window.location.href = "Signup.html";
+// });
+// var b = document.querySelector("#log");
+// b.addEventListener("click", function () {
+//   window.location.href = "login.html";
+// });
+
+// var c = document.querySelector("#cart");
+// c.addEventListener("click", function () {
+//   window.location.href = "cart.html";
+// });
+
+let debounce=document.getElementById("goforsrch");
+debounce.addEventListener("click",()=>{
+
+
+    found();
+})
+
+
+
+
+function found(){
+    let inputfromserarch=document.getElementById("homeinput").value;
+    // localStorage.setItem("navSearch",inputfromserarch);
+
+    if(inputfromserarch==="men"||inputfromserarch==="women"||inputfromserarch==="boy"||inputfromserarch==="saree"||inputfromserarch==="shirt"||inputfromserarch==="pants"){
+        location.href="../products/products.html"
+        localStorage.setItem("prod-Key","products")
+    }else if(inputfromserarch==="mobile"){
+        location.href="../electronics&Mobiles/mobile.html"
+        localStorage.setItem("prod-Key","mobiles")
+    }
+
+}
+
+
+document.getElementById("submitA").addEventListener("click", submitFun);
+
+function submitFun() {
+  var pin=document.getElementById("pinA").value;
+  let name=document.getElementById("name").value;
+  let city=document.getElementById("city").value;
+  let home=document.getElementById("home").value
+  let town=document.getElementById("town").value;
+  let num=document.getElementById("num").value
+
+  if (pin === ""||name===""||city===""||home===""||town===""||num==="") {
+    alert("Enter all the fields");
+  }
+  else{
+    location.href="payment.html";
+ } 
+
+}
+
+// var cart1 =JSON.parse(localStorage.getItem("aadToCart1"))||[];
+//   var cart2 =JSON.parse(localStorage.getItem("aadToCart2"))||[];
+//   var cart3 =JSON.parse(localStorage.getItem("aadToCart3"))||[];
+
+//   var totalI=cart1.length+cart2.length+cart3.length;
+//   document.querySelector("#itemA").textContent=totalI;
+
+</script>
+
+<!-- local storage key name - cart -->
+<!-- array of objects
+{
+  image_url:"https://rukminim1.flixcart.com/image/832/832/xif0q/kurta/x/r/c/xl-pkw-jn21-kt-0102-kannahi-original-imagca9qzhadheg5-bb.jpeg?q=70",
+  name: "Women Printed Pure Cotton A-line Kurta  (White, Blue)",
+  mrp: "2049",
+  price: "400",
+//   quantity:1,
+} -->
+<!-- price description local storage key name - price  -->
