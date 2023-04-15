@@ -1,0 +1,783 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/* appended nav bar  */
+#navbar{
+    background-color: #2874f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+.logo
+{
+    position: relative;
+    padding: 2px 20px 0px 5px;
+}
+.search
+{
+    background-color: white;
+    padding: 8px;
+    width: 400px;
+    margin: 0px 10px;
+    display:flex;
+    justify-content: space-between;
+    color: #2874f0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2px;
+}
+.search input
+{
+    width: 93%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+.loginbtn
+{
+    padding: 7px 40px;
+    background-color: white;
+    border: none;
+    outline: none;
+    color:#2874f0;
+    font-size: 15px;
+    font-weight: 550;
+}
+.Navlink
+{
+    margin: 0px 20px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+.Navlinka
+{
+    margin: 0px 20px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+.Navlink i{
+    font-size: 15px;
+}
+
+
+
+/* first nav  */
+/* #navbar{
+    height: 50px;
+background-color:#2874f0;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0 1px 5px #ababab;
+width: 100%;
+}
+#navbar>div{
+    margin-inline: 22px;
+    color: white;
+    text-decoration: none;
+}
+#navbar a{
+    color: white;
+    text-decoration: none;
+}
+#flipkartLogo{
+    width:100px;
+}
+#abidnavInput{
+    border: none;
+    width: 80%;
+    padding-left: 20px;
+    padding: 6px 0px 6px 10px;
+
+   
+}
+#navbarSearchButton{
+   
+   height: 35px;
+   width: 10%;
+   background-color: white;
+   border: none;
+}
+.fst{
+    display: flex;
+   justify-content: space-between;
+    width: 40%;
+    background-color: white;
+    align-items: center;
+    margin-inline: 22px;
+
+} */
+
+
+/* 2nd nav  */
+.secondNav{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 40px;
+    position:sticky ;
+    width: 100%;
+}
+#sndNavImg{
+    width: 60px;
+    transform: scale(.91);
+}
+#sndNavImg:hover{
+    transform: scale(1);
+}
+.secondNav p{
+    font-size: smaller;
+    font-weight: 600;
+    color: rgb(45, 44, 44);
+}
+
+#slideImg{
+    margin: 20px 0px;
+    width: 100%;
+object-fit: cover;
+    height: 400px;
+  
+}
+
+/* sales part start  */
+
+.abidFstGridA{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    padding-left: 20px;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.abid-sales{
+    cursor: pointer;
+    height: 15em;
+    padding: 0px 1px;
+    margin: 2px 2px;
+    width: 13em;
+    box-sizing: border-box;
+    border: 0;
+
+}
+
+#viewBtn{
+    width: 40%;
+    display: block;
+    margin:10px  23% auto;
+    padding: 10px;
+    background-color: #2874f0;
+    border: none;
+    color: white;
+   opacity: 0.7;
+}
+
+#viewBtn:hover{
+    opacity: 1;
+}
+
+#itemDiv{
+    text-align: center;
+    padding: 10px 0px;
+}
+
+#itemDiv>h3{
+    font-weight: lighter;
+    margin-left: -20px;
+}
+
+.abid-sales img{
+    height: 60%;
+    padding-left: 20px;
+    transform: scale(.87);
+}
+
+
+.abid-sales img:hover{
+    transform: scale(1);
+}
+
+.abid-sales a{
+    text-decoration: none;
+    color: #388e3c;
+    font-size: 12px;
+}
+
+.abid-sales h6{
+    color: black;
+    font-size:14px;
+}
+
+.abid-sales p{
+    color: #212121;
+    opacity: .6;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* Card */
+
+.abid-bannerDiv{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+.abid-cur{
+    cursor: pointer;
+    transform: scale(.95);
+    width: 100%;
+}
+
+.abid-cur:hover{
+    transform: scale(1);
+}
+
+
+/* view All  */
+.abid-viewA{
+    cursor: pointer;
+    height: 15em;
+    padding: 0px 1px;
+    margin: 2px 4px;
+    width: 13em;
+    box-sizing: border-box;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.abid-viewA a{
+    text-decoration: none;
+}
+.abid-viewB{
+    cursor: pointer;
+    height: 15em;
+    padding: 0px 1px;
+    margin: 2px 4px;
+    width: 13em;
+    box-sizing: border-box;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.abid-viewB a{
+    text-decoration: none;
+}
+.abid-viewC{
+    cursor: pointer;
+    height: 15em;
+    padding: 0px 1px;
+    margin: 2px 4px;
+    width: 13em;
+    box-sizing: border-box;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.abid-viewC a{
+    text-decoration: none;
+}
+.abid-viewD{
+    cursor: pointer;
+    height: 15em;
+    padding: 0px 1px;
+    margin: 2px 4px;
+    width: 13em;
+    box-sizing: border-box;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.abid-viewD a{
+    text-decoration: none;
+}
+.abid-viewE{
+    cursor: pointer;
+    height: 15em;
+    padding: 0px 1px;
+    margin: 2px 4px;
+    width: 13em;
+    box-sizing: border-box;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.abid-viewE a{
+    text-decoration: none;
+}
+.abid-viewF{
+    cursor: pointer;
+    height: 15em;
+    padding: 0px 1px;
+    margin: 2px 4px;
+    width: 13em;
+    box-sizing: border-box;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.abid-viewF a{
+    text-decoration: none;
+}
+
+.abid-viewG{
+    cursor: pointer;
+    height: 15em;
+    padding: 0px 1px;
+    margin: 2px 4px;
+    width: 13em;
+    box-sizing: border-box;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.abid-viewG a{
+    text-decoration: none;
+}
+
+/* daily needs useful things  */
+.abidFstGridB{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-left: 20px;
+}
+
+.abidFstGridC{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-left: 20px;
+}
+.abidFstGridD{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-left: 20px;
+}
+.abidFstGridE{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-left: 20px;
+}
+.abidFstGridF{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-left: 20px;
+}
+.abidFstGridG{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin-top: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-left: 20px;
+}
+.abid-daileNeeds{
+    cursor: pointer;
+    height: 15em;
+    padding: 0px 1px;
+    margin: 2px 4px;
+    width: 13em;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.abid-daileNeeds img{
+    height: 45%;
+    transform: scale(.87);
+}
+
+.abid-daileNeeds img:hover{
+    transform: scale(1);
+}
+
+.abid-daileNeeds a{
+    text-decoration: none;
+    color: #388e3c;
+    font-size: 12px;
+}
+
+.abid-daileNeeds h6{
+    color: black;
+    font-size:14px;
+}
+
+.abid-daileNeeds p{
+    color: #212121;
+    opacity: .6;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* end  */
+
+/* daileNeedsniture start  */
+
+
+.abid-fur{
+    cursor: pointer;
+    height: 15em;
+    padding: 0px 1px;
+    margin: 10px 4px;
+    width: 13em;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.abid-fur img{
+    height: 45%;
+    transform: scale(.87);
+}
+
+.abid-fur img:hover{
+    transform: scale(1);
+}
+
+.abid-fur a{
+    text-decoration: none;
+    color: #388e3c;
+    font-size: 12px;
+}
+
+.abid-fur h6{
+    color: black;
+    font-size:14px;
+}
+
+.abid-fur p{
+    color: #212121;
+    opacity: .6;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* end  */
+/* Infor styling start */
+.abidfst{
+    background-color: white;
+    color: #706e6e;
+    margin: 2% 0%;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.abidfst h1,h2{
+    font-size: 17px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.info{
+    font-size: 13px;
+    padding-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Footer start  */
+footer{
+    background-color: #172337;
+    color: white;
+    padding:15px 30px 0px 30px;
+   
+    
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+.sndLastFooter h6{
+    color: #878787;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.sndLastFooter > div{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 100;
+}
+
+.sndLastFooter a{
+    color: white;
+    line-height: 25px;
+    text-decoration: none;
+}
+
+.sndLastFooter p{
+    margin: 0;
+    font-size: .96em;
+    line-height: 1.2rem;
+}
+
+footer i{
+    color: gold;
+}
+
+footer span{
+    font-size: 10px;
+    cursor: pointer;
+}
+.abidlastrow{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+#hr{
+border:1px solid;
+color: rgb(136, 133, 133);
+
+}
+
+
+
+/* media queries  */
+
+
+
+
+@media screen and (max-width: 1132px){
+   
+    .abidFstGridA{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+       
+    }
+    .abidFstGridB{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+      
+    }
+    .abidFstGridC{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding-left: 20px;
+    }
+    .abidFstGridD{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+      
+    }
+    .abidFstGridE{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+       
+    }
+    .abidFstGridF{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+       
+    }
+    .abidFstGridG{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+       
+    }
+} 
+
+@media screen and (max-width: 1208px){
+    .slideNav{
+        display: none;
+    }
+}
+@media screen and (max-width: 808px){
+
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        width: 800px;
+    }
+    .slideNav{
+        display: none;
+    }
+            .secondNav{
+                display: none;
+            }
+            .Navlink{
+                display: none;
+            }
+           
+}
+@media screen and (max-width: 792px){
+  
+    .slideNav{
+display: none;
+    }
+    .secondNav{
+        display: none;
+    }
+    .abidFstGridA{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+       
+    }
+    .abidFstGridB{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+      
+    }
+    .abidFstGridC{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding-left: 20px;
+    }
+    .abidFstGridD{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+      
+    }
+    .abidFstGridE{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+       
+    }
+    .abidFstGridF{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+       
+    }
+    .abidFstGridG{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+       
+    }
+    
+}
+@media screen and (max-width: 668px){
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+    }
+    .secondNav{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    .abidFstGridA{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       
+    }
+    .abidFstGridB{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+      
+    }
+    .abidFstGridC{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding-left: 20px;
+    }
+    .abidFstGridD{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+      
+    }
+    .abidFstGridE{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       
+    }
+    .abidFstGridF{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       
+    }
+    .abidFstGridG{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       
+    }
+}
+@media screen and (max-width: 388px){
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+    }
+    .secondNav{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    .abidFstGridA{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+       
+    }
+    .abidFstGridB{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+      
+    }
+    .abidFstGridC{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding-left: 20px;
+    }
+    .abidFstGridD{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+      
+    }
+    .abidFstGridE{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+       
+    }
+    .abidFstGridF{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+       
+    }
+    .abidFstGridG{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+       
+    }
+    h5{
+        font-size: xx-small;
+        color: rgb(99, 99, 99); 
+        margin-left: 10px;
+    }
+}
