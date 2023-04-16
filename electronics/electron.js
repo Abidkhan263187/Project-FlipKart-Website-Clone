@@ -14,7 +14,7 @@ import {footer,footer2} from "../footer/footer.js";
 
  
 let pv = localStorage.getItem("prod-Key")
-var url = `https://myjson.onrender.com/mobiles`+`?_page=1&_limit=4`
+var url = `https://myjson.onrender.com/electron`+`?_page=1&_limit=4`
 
 
 async function geturl(url) {
@@ -43,7 +43,7 @@ fetchProducts();
 function display(mobilesArray) {
 
     document.getElementById("abidmobileContainer").textContent = ""
-    console.log(mobilesArray)
+    // console.log(mobilesArray)
     mobilesArray.forEach(
         ({
             basePrice,
@@ -56,7 +56,7 @@ function display(mobilesArray) {
             f1, f2, f3, f4, f5, f6
 
         }) => {
-            // console.log(basePrice,brand,displayName,gender,id,img,price,size)
+            // console.log( f1, f2, f3, f4, f5, f6)
 
 
             let card = document.createElement("div");
@@ -69,17 +69,17 @@ function display(mobilesArray) {
             cardAChilda.setAttribute("class", "cardAchilda");
 
             let image = document.createElement("img");
-            image.setAttribute("class", "mobimg")
+            image.setAttribute("class", "eleimg")
             image.src = img;
             image.addEventListener("click", () => {
                 location.href = "../prod_desc/prod_desc.html"
-                localStorage.setItem("prod-Data", "mobiles?id="+id)
+                localStorage.setItem("prod-Data", "electron?id="+id)
             })
 
             cardAChilda.append(image);
 
             let cardAchildb = document.createElement("div");
-            cardAchildb.setAttribute("class", "cardAchildb");
+            cardAchildb.setAttribute("class", "cardAchildbele");
 
             let Brandh2 = document.createElement("h3");
             Brandh2.setAttribute("class", "Brandh2");
@@ -101,7 +101,7 @@ function display(mobilesArray) {
             let p6 = document.createElement("li");
             p6.textContent = f6;
 
-            cardAchildb.append(Brandh2, mobname, p1, p2, p3, p4, p5, p6)
+            cardAchildb.append(Brandh2, mobname,p1,p2,p3,p4,p5,p6)
 
 
 
@@ -183,7 +183,7 @@ function display(mobilesArray) {
 var arr= JSON.parse(localStorage.getItem("cart"))|| []
 async function gotoCart(id) {
     try {
-        let fetchRes = await geturl(`https://myjson.onrender.com/mobiles` +`/${id}`)
+        let fetchRes = await geturl(`https://myjson.onrender.com/electron` +`/${id}`)
         // console.log(fetchRes)
 
         let obj = {
@@ -204,7 +204,7 @@ console.log(error)
 
 let clearbtn = document.getElementById("clearAll");
 clearbtn.addEventListener("click", () => {
-    location.href = "mobile.html"
+    location.href = "electron.html"
 })
 
 
@@ -222,39 +222,55 @@ selPrice.addEventListener("change", () => {
     brand();
 })
 
+let selCat = document.getElementById("selectCat");
+selCat.addEventListener("change", () => {
+    brand();
+})
+
+
 
 
 function brand() {
     let brand = selBrand.value;
     let discount = disc.value;
     let price = selPrice.value;
+    let gender = selCat.value;
 
+    if(gender===""){
+        url = `https://myjson.onrender.com/electron`
+        fetchProducts();
+        return;
+    }
+
+    if (gender !== "") {
+        url += `?cat=${gender}`
+
+    }
+    else {
+        if (gender === "") {
+            url += `?brand=${brand}`
+        }
+        else {(brand !== "")
+            url += `&brand=${brand}`
+        }
+    }
 
     if (brand !== "") {
-        url += `?brand=${brand}`
+        url += `&brand=${brand}`
     }
-
-    else {
-        if (brand === "") {
-            url += `?_sort=${price}&_order=asc`
-        } else {
-            (price !== "")
-            url += `&_sort=${price}&_order=asc`
-        }
-
-    }
-
+    // if (rating !== "") {
+    //     url += `&rat_gte=${rating}`
+    // }
 
     if (discount !== "") {
-        url += `&dis_gte=${discount}`
+        url += `&discount_gte=${discount}`
     }
 
     if (price !== "") {
         url += `&_sort=${price}&_order=asc`
     }
-
     fetchProducts();
-    url = `https://myjson.onrender.com/mobiles`
+    url = `https://myjson.onrender.com/electron`
 }
 
 let debounce=document.getElementById("goforsrch");

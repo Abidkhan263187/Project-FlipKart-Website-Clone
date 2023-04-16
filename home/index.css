@@ -62,6 +62,13 @@
     color: white;
     text-decoration: none;
 }
+.Navlinkb
+{
+    margin: 0px 20px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
 .Navlink i{
     font-size: 15px;
 }
@@ -608,6 +615,9 @@ color: rgb(136, 133, 133);
 
 @media screen and (max-width: 1208px){
     .slideNav{
+        display: none;
+    }
+    .Navlink{
         display: none;
     }
 }

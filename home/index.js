@@ -74,6 +74,8 @@ function found(){
     }else if(inputfromserarch==="mobile"){
         location.href="../electronics&Mobiles/mobile.html"
         localStorage.setItem("prod-Key","mobiles")
+    }else if(inputfromserarch==="tab"||inputfromserarch==="camera"||inputfromserarch==="lcd"){
+        location.href="../electronics/electron.html"
     }
 
 
