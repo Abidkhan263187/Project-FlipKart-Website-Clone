@@ -213,7 +213,9 @@ justify-content: space-around;
     /* margin-top: 20px; */
     /* margin-bottom: 5px; */
 }
-
+.eleimg{
+    width: 60%;
+}
 .cardDivELE{
     display: flex;
     flex-direction: column;
@@ -397,9 +399,7 @@ height: 200px;
     object-fit: cover;
    
 }
-.cardB,.cardBa,.cardBb,.cardBc{
-    /* border: 1px solid; */
-}
+
 .Brandh2{
     color: gray;
     font-weight: 550;
@@ -476,7 +476,10 @@ margin-top: 5px;
     color: gray;
     font-weight: 600;
 }
-
+.cardAchildbele{
+    /* border: 1px solid; */
+    width: 120%;
+}
 
 
 /* pagging part  */
@@ -614,6 +617,7 @@ color: rgb(136, 133, 133);
         flex-wrap: wrap;
         margin-top: 20px;
        text-align: left;
+       margin-bottom: 20px;
     }
     #abidproductContainer{
         display: grid;
@@ -629,6 +633,10 @@ color: rgb(136, 133, 133);
 }
 @media only screen  and (max-width: 770px){
   
+
+    #abidmobileContainer{
+        margin-top: 20px;
+    }
     #abidproductContainer{
         display: grid;
         grid-template-columns: repeat(2,1fr);

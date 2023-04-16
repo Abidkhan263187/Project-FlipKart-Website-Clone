@@ -14,7 +14,7 @@ let footer2part = document.getElementById("abidFooter2");
 footer2part.innerHTML = footer2()
 
 let pv = localStorage.getItem("prod-Key")
-var url = `https://myjson.onrender.com` + `/${pv}`+`?_page=1&_limit=12`
+var url = `https://myjson.onrender.com/products`+`?_page=1&_limit=12`
 
 async function geturl(url) {
     try {
