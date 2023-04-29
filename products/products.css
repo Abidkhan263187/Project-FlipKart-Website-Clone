@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -8,7 +8,7 @@
 
 
 /* nav bar start  */
-nav{
+nav {
     background-color: #2874f0;
     display: flex;
     justify-content: center;
@@ -16,78 +16,126 @@ nav{
     padding: 10px 0px;
     margin-bottom: 10px;
 }
-.logo
-{
+
+.logo {
     position: relative;
     padding: 2px 20px 0px 5px;
 }
-.search
-{
+
+.search {
     background-color: white;
     padding: 8px;
     width: 400px;
     margin: 0px 10px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     color: #2874f0;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 2px;
 }
-.search input
-{
+
+.search input {
     width: 93%;
     border: none;
     outline: none;
     font-size: 15px;
 }
-.loginbtn
-{
+
+.loginbtn {
     padding: 7px 40px;
     background-color: white;
     border: none;
     outline: none;
-    color:#2874f0;
+    color: #2874f0;
     font-size: 15px;
     font-weight: 550;
 }
-.Navlink
-{
+
+.Navlink {
     margin: 0px 20px;
     font-size: 18px;
     color: white;
     text-decoration: none;
 }
-.Navlinka
-{
+
+.Navlinka {
     margin: 0px 20px;
     font-size: 18px;
     color: white;
     text-decoration: none;
 }
-.Navlink i{
+.Navlinka i{
+    color: white;
+}
+
+.Navlink i {
     font-size: 15px;
+}
+
+
+.dropdown-content2 a {
+    color: black;
+    font-weight: 400;
+    padding: 5px 0px;
+    text-decoration: none;
+    margin-top: 5px;
+    display: block;
+}
+
+.dropdown-content2 a:hover {
+    background-color: rgb(241, 239, 239);
+}
+
+nav>span:hover .dropdown-content2 {
+    display: block;
+}
+
+nav>span {
+    position: relative;
+    display: inline-block;
+    padding: 0px 0px;
+
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 250px;
+    padding: 40px 30px 30px 30px;
+    margin-left: -40px;
+    border-radius: 20px;
+}
+i{
+    margin-right: 10px;
+    color:#2874f0;
+}
+
+hr {
+    color: gray;
 }
 
 /* nav end  */
 
-#container{
-  
+#container {
+
     display: flex;
 }
 
-#abidproductContainerMain{
+#abidproductContainerMain {
     /* border: 1px solid; */
     margin-top: 10px;
     margin-left: 5px;
     width: 100%;
 }
-#abidproductContainer{
+
+#abidproductContainer {
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
-#abidproductContainer>div{
+#abidproductContainer>div {
     border: 1px solid;
     /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
     cursor: pointer;
@@ -97,91 +145,146 @@ nav{
     width: 17em;
     box-sizing: border-box;
     border: 0;
-   
+
 }
 
-#abidproductContainer>div:hover{
+#abidproductContainer>div:hover {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
 }
-#abidproductContainer img{
+
+#abidproductContainer img {
     height: 70%;
     width: 100%;
     object-fit: cover;
-   
-}
-.divdetails2>p{
-    margin-right: 5px;
-}
-.divdetails2{
-    display: flex;
-   
+
 }
 
+.divdetails2>p {
+    margin-right: 5px;
+}
+
+.divdetails2 {
+    display: flex;
+
+}
+
+
+
+/* top offers  */
+
+#abidtopOfferContainer {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#abidtopOfferContainer>div {
+    border: 1px solid;
+    /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
+    cursor: pointer;
+    height: 24em;
+    padding: 0px 10px;
+    margin: 10px 4px;
+    width: 17em;
+    box-sizing: border-box;
+    border: 0;
+
+}
+
+#abidtopOfferContainer>div:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+}
+
+#abidtopOfferContainer img {
+    margin-top: 10px;
+    height: 230px;
+    width: 80%;
+    /* object-fit: cover; */
+
+}
+
+.divdetails2>p {
+    margin-right: 5px;
+}
+
+.divdetails2 {
+    display: flex;
+
+}
 
 /* filters  */
 
-h5{
+h5 {
     font-size: medium;
-    color: rgb(99, 99, 99); 
+    color: rgb(99, 99, 99);
     margin-left: 10px;
 }
-.filterWr{
+
+.filterWr {
     font-size: medium;
     color: rgb(75, 75, 75);
-  
+
 }
-select{
+
+select {
     margin-top: 10px;
     padding: 5px;
     width: 100%;
     border: none;
 }
-#abidFilterDiv{
+
+#abidFilterDiv {
     /* border: 1px solid; */
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
     margin: 10px 10px 0px 10px;
     width: 20%;
     padding: 5px 10px;
 }
-#Filterfst{
+
+#Filterfst {
     display: flex;
     /* border: 1px solid; */
     justify-content: space-between;
-    padding:  0px 10px;
+    padding: 0px 10px;
 }
-#Filterfst>h3{
+
+#Filterfst>h3 {
     padding: 5px;
 }
 
-#clearAll{
+#clearAll {
     border: none;
     color: #2874f0;
-background-color: transparent;
+    background-color: transparent;
     border-radius: 5px;
     padding: 5px 10px;
 }
-#abidFilterDiv>div{
+
+#abidFilterDiv>div {
     margin: 2% 0%;
     padding-bottom: 25%;
 
 }
-#filterscnd{
 
-justify-content: space-around;
+#filterscnd {
+
+    justify-content: space-around;
 }
 
 
 
 /* mobiles start  */
-#abidmobileContainer{
+#abidmobileContainer {
 
     display: grid;
-    grid-template-columns: repeat(1,1fr);;
+    grid-template-columns: repeat(1, 1fr);
+    ;
     border: 1px green;
 }
 
-.card{
+.card {
     display: flex;
     justify-content: space-around;
     /* border: 1px solid; */
@@ -189,7 +292,7 @@ justify-content: space-around;
     padding: 20px 20px;
 }
 
-.cardA{
+.cardA {
     /* border: 1px solid; */
     display: flex;
     justify-content: space-between;
@@ -197,14 +300,14 @@ justify-content: space-around;
     align-items: center;
 }
 
-.cardAchildb{
+.cardAchildb {
     /* border: 1px solid; */
     height: 100%;
 }
 
 
 /* electronics start  */
-.detailDivM1{
+.detailDivM1 {
     /* border: 1px solid; */
     height: 100px;
     display: flex;
@@ -213,27 +316,31 @@ justify-content: space-around;
     /* margin-top: 20px; */
     /* margin-bottom: 5px; */
 }
-.eleimg{
+
+.eleimg {
     width: 60%;
 }
-.cardDivELE{
+
+.cardDivELE {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-#abidelectronicContainerMain{
+
+#abidelectronicContainerMain {
     margin-top: 10px;
     margin-left: 20px;
     width: 80%;
 }
-#abidelectronicContainer{
+
+#abidelectronicContainer {
     display: grid;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
-#abidelectronicContainer>div{
-  
+#abidelectronicContainer>div {
+
     cursor: pointer;
     height: 25em;
     padding: 10px 10px;
@@ -241,26 +348,31 @@ justify-content: space-around;
     width: 15em;
     box-sizing: border-box;
     border: 0;
-   
+
 }
-#abidelectronicContainer>div:hover{
+
+#abidelectronicContainer>div:hover {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
 }
-#abidelectronicContainer img{
+
+#abidelectronicContainer img {
     height: 40%;
     width: 100%;
     /* margin-bottom: 10px; */
-   
+
 }
-.divdetails2>p{
+
+.divdetails2>p {
     margin-right: 5px;
 }
-.divdetails2{
+
+.divdetails2 {
     display: flex;
-   
+
 }
-.ratingDiv{
+
+.ratingDiv {
     /* border: 1px solid; */
     margin: 10px 0%;
     display: flex;
@@ -270,16 +382,18 @@ justify-content: space-around;
 
 
 /* image part ////  */
-.mobimg{
-    
-height: 200px;
+.mobimg {
+
+    height: 200px;
 }
-.assured{
+
+.assured {
     width: 70px;
     /* margin-top: 10px; */
     /* object-fit: cover; */
 }
-.cardBa{
+
+.cardBa {
     display: flex;
     justify-content: space-between;
 }
@@ -287,22 +401,25 @@ height: 200px;
 
 
 /* product card styles */
-.abidBrandName{
+.abidBrandName {
     color: gray;
     font-weight: 700;
 }
-.detailDiv1{
-  
-   height: 50px;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   margin-bottom: 5px;
+
+.detailDiv1 {
+
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 5px;
 }
-.detailDiv1:nth-child(2){
+
+.detailDiv1:nth-child(2) {
     font-size: smaller;
 }
-.divdetails2{
+
+.divdetails2 {
     /* border: 1px solid; */
     justify-content: space-between;
     width: 70%;
@@ -310,33 +427,41 @@ height: 200px;
     margin-bottom: 10px;
 
 }
-.divdetails2ELE{
+
+.divdetails2ELE {
     display: flex;
     justify-content: space-between;
     width: 80%;
     font-size: smaller;
     margin-bottom: 10px;
 }
-.Pprice{
+
+.Pprice {
     font-weight: 550;
     font-size: larger;
 }
-.dis,.disc,.rating{
+
+.dis,
+.disc,
+.rating {
     color: green;
     font-weight: 400;
-    
+
 }
-.sizeDiv{
+
+.sizeDiv {
     /* border: 1px solid; */
     display: flex;
     width: 25%;
     justify-content: space-between;
 }
-.sizetxt{
+
+.sizetxt {
     color: gray;
     font-weight: 500;
 }
-#paragraph{
+
+#paragraph {
     /* border: 1px solid; */
     display: flex;
     flex-direction: column;
@@ -344,9 +469,10 @@ height: 200px;
     padding: 20px 20px;
     height: max-content;
     color: gray;
-  
+
 }
-#formalityAbi{
+
+#formalityAbi {
     /* border: 1px solid;  */
     display: flex;
     flex-direction: column;
@@ -354,19 +480,23 @@ height: 200px;
     padding: 20px 20px;
     height: 100px;
 }
-#paraID{
+
+#paraID {
     color: gray;
     font-size: smaller;
 }
-#span1Para{
+
+#span1Para {
     margin-bottom: 20px;
     font-size: small;
 }
-#Para2{
+
+#Para2 {
     margin-top: 20px;
     font-size: small;
 }
-#mensT{
+
+#mensT {
     font-size: medium;
     color: black;
     font-weight: 550;
@@ -376,69 +506,77 @@ height: 200px;
 
 /* mobiles css start  */
 
-#abidmobileContainerMain{
+#abidmobileContainerMain {
     margin-top: 10px;
     margin-left: 5px;
     width: 80%;
 }
-#abidmobileContainer{
+
+#abidmobileContainer {
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
 
 
-#abidmobileContainer>div:hover{
+#abidmobileContainer>div:hover {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
 }
 
-#abidmobileContainer >img{
-    
+#abidmobileContainer>img {
+
     /* width: 100%; */
     object-fit: cover;
-   
+
 }
 
-.Brandh2{
+.Brandh2 {
     color: gray;
     font-weight: 550;
 
     margin-bottom: 20px;
 }
-li{
-color: gray;
-font-size: small;
-margin-top: 5px;
+
+li {
+    color: gray;
+    font-size: small;
+    margin-top: 5px;
 }
-.mobName{
+
+.mobName {
     margin-bottom: 10px;
 }
-#paragraphMob{
-     /* border: 1px solid;  */
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     padding: 20px 20px;
-     height: 125px;
+
+#paragraphMob {
+    /* border: 1px solid;  */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px;
+    height: 125px;
 }
-#paraIDI{
+
+#paraIDI {
     color: #2874f0;
     font-size: small;
 }
-.freeP{
-   margin-bottom: 5px;
+
+.freeP {
+    margin-bottom: 5px;
     color: green;
     font-weight: 550;
 }
-.cardBb{
+
+.cardBb {
     display: flex;
     justify-content: space-between;
-    margin:10px 0px 70px 0px;
+    margin: 10px 0px 70px 0px;
     width: 60%;
 
 }
-.abidCart{
+
+.abidCart {
     font-weight: 600;
     background-color: #ff9f00;
     padding: 10px;
@@ -447,7 +585,8 @@ margin-top: 5px;
     color: white;
     margin-bottom: 30px;
 }
-.abidCartP{
+
+.abidCartP {
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 600;
@@ -458,7 +597,8 @@ margin-top: 5px;
     color: white;
     margin-bottom: 30px;
 }
-.abidCartE{
+
+.abidCartE {
     font-weight: 600;
     background-color: #ff9f00;
     padding: 8px;
@@ -467,23 +607,26 @@ margin-top: 5px;
     color: white;
     /* margin-bottom: 30px; */
 }
-#offDivo{
+
+#offDivo {
     display: flex;
     /* border: 1px solid; */
     justify-content: space-between;
 }
-.bankOffer{
+
+.bankOffer {
     color: gray;
     font-weight: 600;
 }
-.cardAchildbele{
+
+.cardAchildbele {
     /* border: 1px solid; */
     width: 120%;
 }
 
 
 /* pagging part  */
-#pageingBtn{
+#pageingBtn {
     /* border: 1px solid; */
     display: flex;
     /* justify-content: center; */
@@ -491,39 +634,43 @@ margin-top: 5px;
     align-items: center;
     /* margin:  0px 40px 0px; */
     width: 20%;
-    margin: 30px  auto;
+    margin: 30px auto;
 }
-#prev{
-width: 40%;
-padding: 5px;
-border: none;
-border-radius: 5px;
-background-color:#ff9f00;
-color: white;
-font-weight: 800;
-font-size: large;
-}
-#next{
+
+#prev {
     width: 40%;
     padding: 5px;
     border: none;
     border-radius: 5px;
-    background-color:#ff9f00;
+    background-color: #ff9f00;
     color: white;
     font-weight: 800;
     font-size: large;
 }
-#next:hover{
+
+#next {
+    width: 40%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9f00;
+    color: white;
+    font-weight: 800;
+    font-size: large;
+}
+
+#next:hover {
     background-color: #2874f0;
 }
-#prev:hover{
+
+#prev:hover {
     background-color: #2874f0;
 }
 
 
 
 /* Infor styling start  an footer*/
-.abidfst{
+.abidfst {
     background-color: white;
     color: #706e6e;
     margin: 2% 0%;
@@ -531,35 +678,39 @@ font-size: large;
     padding-left: 10px;
 }
 
-.abidfst h1,h2{
+.abidfst h1,
+h2 {
     font-size: 17px;
     font-weight: 900;
     margin-bottom: 10px;
 }
-.info{
+
+.info {
     font-size: 13px;
     padding-bottom: 5px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-footer{
+footer {
     background-color: #172337;
     color: white;
-    padding:15px 30px 0px 30px;
-    
+    padding: 15px 30px 0px 30px;
+
 }
-.row{
+
+.row {
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
 }
-.sndLastFooter h6{
+
+.sndLastFooter h6 {
     color: #878787;
     font-size: 13px;
     margin-bottom: 10px;
 }
 
-.sndLastFooter > div{
+.sndLastFooter>div {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -567,34 +718,36 @@ footer{
     font-weight: 100;
 }
 
-.sndLastFooter a{
+.sndLastFooter a {
     color: white;
     line-height: 25px;
     text-decoration: none;
 }
 
-.sndLastFooter p{
+.sndLastFooter p {
     margin: 0;
     font-size: .96em;
     line-height: 1.2rem;
 }
 
-footer i{
+footer i {
     color: gold;
 }
 
-footer span{
+footer span {
     font-size: 10px;
     cursor: pointer;
 }
-.abidlastrow{
+
+.abidlastrow {
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
-#hr{
-border:1px solid;
-color: rgb(136, 133, 133);
+
+#hr {
+    border: 1px solid;
+    color: rgb(136, 133, 133);
 
 }
 
@@ -603,61 +756,72 @@ color: rgb(136, 133, 133);
 /* media queries   */
 
 
- 
-@media only screen  and (max-width: 1087px){
- 
-    .card{
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 20px;
-       text-align: left;
-    }
-    .cardA{
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 20px;
-       text-align: left;
-       margin-bottom: 20px;
-    }
-    #abidproductContainer{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-    }
-    #abidelectronicContainer{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-    }
-    .Navlink{
-        display: none;
-            }
-}
-@media only screen  and (max-width: 770px){
-  
 
-    #abidmobileContainer{
+@media only screen and (max-width: 1087px) {
+
+    .card {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .cardA {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    #abidproductContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #abidelectronicContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Navlink {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+
+
+    #abidmobileContainer {
         margin-top: 20px;
     }
-    #abidproductContainer{
+
+    #abidproductContainer {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-    #abidelectronicContainer{
+
+    #abidelectronicContainer {
         display: grid;
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
-    h5{
+
+    h5 {
         font-size: xx-small;
-        color: rgb(99, 99, 99); 
+        color: rgb(99, 99, 99);
         margin-left: 10px;
     }
-    #Filterfst{
+
+    #Filterfst {
         display: flex;
         flex-wrap: wrap;
     }
-    .Navlink{
-display: none;
+
+    .Navlink {
+        display: none;
     }
-    .search{
+
+    .search {
         display: none;
     }
 }

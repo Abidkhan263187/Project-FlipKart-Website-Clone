@@ -14,7 +14,7 @@ let footer2part = document.getElementById("abidFooter2");
 footer2part.innerHTML = footer2()
 
 let pv = localStorage.getItem("prod-Key")
-var url = `https://myjson.onrender.com/products`+`?_page=1&_limit=12`
+var url = `https://myjson.onrender.com/products`
 
 async function geturl(url) {
     try {
@@ -161,21 +161,24 @@ function brand() {
     let discount = disc.value;
     let price = selPrice.value;
 
-
+// if(gender===""){
+//     url = `https://myjson.onrender.com/products`
+//     fetchProducts();
+// }
 
     if (gender !== "") {
         url += `?cat=${gender}`
 
     }
-    else {
-        if (gender === "") {
-            url += `?brand=${brand}`
-        }
-        else {
-            (brand !== "")
-            url += `&brand=${brand}`
-        }
-    }
+    // else {
+    //     if (gender === "") {
+    //         url += `?brand=${brand}`
+    //     }
+    //     else {
+    //         (brand !== "")
+    //         url += `&brand=${brand}`
+    //     }
+    // }
 
     if (brand !== "") {
         url += `&brand=${brand}`
@@ -242,10 +245,12 @@ function found(){
     }else if(inputfromserarch==="mobile"){
         location.href="../electronics&Mobiles/mobile.html"
         localStorage.setItem("prod-Key","mobiles")
+    }else if(inputfromserarch==="tab"||inputfromserarch==="camera"||inputfromserarch==="lcd"){
+        location.href="../electronics/electron.html"
     }
 
-}
 
+}
 
 
 let page=1;
@@ -269,7 +274,7 @@ function prev(){
     if(page==1) return;
     page--;
     pageno.textContent=page
-    fetchProductpage(`https://myjson.onrender.com` + `/${pv}`+`?_page=${page}&_limit=12`)
+    fetchProductpage(`https://myjson.onrender.com` + `/${pv}`+`?_page=${page}&_limit=8`)
   
 }
 
@@ -278,7 +283,7 @@ function next(){
 page++;
     console.log(page)
     pageno.textContent=page
-    fetchProductpage(`https://myjson.onrender.com` + `/${pv}`+`?_page=${page}&_limit=12`)
+    fetchProductpage(`https://myjson.onrender.com` + `/${pv}`+`?_page=${page}&_limit=8`)
 }
 
 async function fetchProductpage(url){
