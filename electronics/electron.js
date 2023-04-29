@@ -14,7 +14,7 @@ import {footer,footer2} from "../footer/footer.js";
 
  
 let pv = localStorage.getItem("prod-Key")
-var url = `https://myjson.onrender.com/electron`+`?_page=1&_limit=4`
+var url = `https://myjson.onrender.com/electron`
 
 
 async function geturl(url) {
@@ -236,11 +236,11 @@ function brand() {
     let price = selPrice.value;
     let gender = selCat.value;
 
-    if(gender===""){
-        url = `https://myjson.onrender.com/electron`
-        fetchProducts();
-        return;
-    }
+    // if(gender===""){
+    //     url = `https://myjson.onrender.com/electron`
+    //     fetchProducts();
+    //     return;
+    // }
 
     if (gender !== "") {
         url += `?cat=${gender}`

@@ -14,7 +14,7 @@ import {footer,footer2} from "../footer/footer.js";
 
  
 let pv = localStorage.getItem("prod-Key")
-var url = `https://myjson.onrender.com/mobiles`+`?_page=1&_limit=4`
+var url = `https://myjson.onrender.com/mobiles`
 
 
 async function geturl(url) {
@@ -246,7 +246,7 @@ function brand() {
 
 
     if (discount !== "") {
-        url += `&dis_gte=${discount}`
+        url += `&discount_gte=${discount}`
     }
 
     if (price !== "") {
@@ -267,6 +267,7 @@ debounce.addEventListener("click",()=>{
 
 
 
+
 function found(){
     let inputfromserarch=document.getElementById("homeinput").value;
     // localStorage.setItem("navSearch",inputfromserarch);
@@ -277,7 +278,10 @@ function found(){
     }else if(inputfromserarch==="mobile"){
         location.href="../electronics&Mobiles/mobile.html"
         localStorage.setItem("prod-Key","mobiles")
+    }else if(inputfromserarch==="tab"||inputfromserarch==="camera"||inputfromserarch==="lcd"){
+        location.href="../electronics/electron.html"
     }
+
 
 }
 
