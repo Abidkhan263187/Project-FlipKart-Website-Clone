@@ -741,9 +741,9 @@ footer span {
 
 @media screen and (max-width: 668px) {
     footer {
-        display: flex;
+        display: none;
         flex-wrap: wrap;
-        width: 600px;
+        width: 500px;
     }
 
     .secondNav {
@@ -802,7 +802,7 @@ footer span {
 
 @media screen and (max-width: 388px) {
     footer {
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         width: 600px;
     }
@@ -895,7 +895,7 @@ footer span {
 }
 @media screen and (max-width: 320px) {
     footer {
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         width: 600px;
     }
@@ -981,7 +981,7 @@ footer span {
 }
 @media screen and (max-width: 280px) {
     footer {
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         width: 600px;
     }

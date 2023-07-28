@@ -1,6 +1,6 @@
 function navbar(){
     return`  <div class="logo">
-    <a href="../home/index.html"> <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fk-plus_3b0baa.png" width="100px" height ="25px"></a>
+    <a href="../index.html"> <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fk-plus_3b0baa.png" width="100px" height ="25px"></a>
 </div>
 <div class="search">
     <input type="text" placeholder="Search for products,brands and more" id="homeinput">

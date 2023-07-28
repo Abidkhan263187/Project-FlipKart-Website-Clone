@@ -43,7 +43,7 @@ fetchProducts();
 function display(mobilesArray) {
 
     document.getElementById("abidmobileContainer").textContent = ""
-    console.log(mobilesArray)
+    // console.log(mobilesArray)
     mobilesArray.forEach(
         ({
             basePrice,
@@ -234,24 +234,34 @@ function brand() {
         url += `?brand=${brand}`
     }
 
-    else {
-        if (brand === "") {
-            url += `?_sort=${price}&_order=asc`
-        } else {
-            (price !== "")
-            url += `&_sort=${price}&_order=asc`
+        if  (price !== ""){
+            if (brand !== '') {
+                if(price === "lowToHigh"){
+                    url += `&_sort=price&_order=asc`
+                }else{
+                    url += `&_sort=price&_order=desc`
+                }
+            } else {
+                if(price === "lowToHigh"){
+                    url += `?_sort=price&_order=asc`
+                }else{
+                    url += `?_sort=price&_order=desc`
+                }
+            }
         }
-
-    }
-
+           
+        
 
     if (discount !== "") {
-        url += `&discount_gte=${discount}`
+
+        if( brand !== ''|| price !==''){
+            url += `&discount_gte=${discount}`
+        }else{
+            url += `?discount_gte=${discount}`
+        }
+        
     }
 
-    if (price !== "") {
-        url += `&_sort=${price}&_order=asc`
-    }
 
     fetchProducts();
     url = `https://myjson.onrender.com/mobiles`

@@ -236,38 +236,47 @@ function brand() {
     let price = selPrice.value;
     let gender = selCat.value;
 
-    // if(gender===""){
-    //     url = `https://myjson.onrender.com/electron`
-    //     fetchProducts();
-    //     return;
-    // }
-
+   
     if (gender !== "") {
         url += `?cat=${gender}`
 
     }
-    else {
-        if (gender === "") {
-            url += `?brand=${brand}`
-        }
-        else {(brand !== "")
-            url += `&brand=${brand}`
-        }
-    }
 
     if (brand !== "") {
-        url += `&brand=${brand}`
+        if (gender !== "") {
+            url += `&brand=${brand}`
+        } else {
+            url += `?brand=${brand}`
+        }
     }
-    // if (rating !== "") {
-    //     url += `&rat_gte=${rating}`
-    // }
 
     if (discount !== "") {
-        url += `&discount_gte=${discount}`
+        if(gender!==''||brand!==''){
+            url += `&discount_gte=${discount}`
+        }else{
+            url += `?discount_gte=${discount}`
+        }
+       
     }
 
     if (price !== "") {
-        url += `&_sort=${price}&_order=asc`
+     
+        if (gender !== '' || brand !== ''  || discount !== '') {
+           
+            if(price === "lowToHigh"){
+                url += `&_sort=price&_order=asc`
+            }else{
+                url += `&_sort=price&_order=desc`
+            }
+        } else {
+            if(price === "lowToHigh"){
+                url += `?_sort=price&_order=asc`
+            }else{
+                url += `?_sort=price&_order=desc`
+            }
+       
+        }
+
     }
     fetchProducts();
     url = `https://myjson.onrender.com/electron`

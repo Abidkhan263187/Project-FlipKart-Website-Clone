@@ -312,3 +312,16 @@ border:1px solid;
 color: rgb(136, 133, 133);
 
 }
+@media (max-width: 767px) {
+    /* CSS properties for small screens */
+  }
+
+  /* Styles for medium screens */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* CSS properties for medium screens */
+  }
+
+  /* Styles for large screens */
+  @media (min-width: 1024px) {
+    /* CSS properties for large screens */
+  }

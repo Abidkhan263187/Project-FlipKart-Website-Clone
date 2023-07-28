@@ -787,15 +787,21 @@ footer span {
     .Navlink {
         display: none;
     }
+    footer{
+        display: none;
+    }
+   
 }
 
-@media only screen and (max-width: 770px) {
 
-
+@media (max-width: 767px) {
+    /* CSS properties for small screens */
     #abidmobileContainer {
         margin-top: 20px;
     }
-
+select{
+    font-size: 10px;
+}
     #abidproductContainer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -824,4 +830,43 @@ footer span {
     .search {
         display: none;
     }
-}
+  }
+
+  /* Styles for medium screens */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* CSS properties for medium screens */
+    .card {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .cardA {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    #abidproductContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #abidelectronicContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Navlink {
+        display: none;
+    }
+   
+  }
+
+  /* Styles for large screens */
+  @media (min-width: 1024px) {
+    /* CSS properties for large screens */
+  }

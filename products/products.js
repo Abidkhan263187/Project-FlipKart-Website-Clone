@@ -32,38 +32,35 @@ async function fetchProducts() {
     try {
         let fetchData = await geturl(url)
         console.log(fetchData)
+        if(fetchData)
         display(fetchData)
+        else{
+            displayLoad();
+        }
     } catch (error) {
         console.log(error)
     }
 }
 fetchProducts();
 
+function displayLoad(){
+    let div=document.createElement("div");
+    div.innerHTML="loading please wait...";
+
+    document.getElementById("abidproductContainer").append(div)
+}
 
 function display(productsArray) {
     document.getElementById("abidproductContainer").textContent = ""
     productsArray.forEach(
-        ({
-            basePrice,
-            brand,
-            displayName,
-            gender,
-            id,
-            img,
-            price,
-            size,
-            discount
-
-        }) => {
-            // console.log(basePrice,brand,displayName,gender,id,img,price,size)
-
-
+        ({ basePrice, brand, displayName, gender, id, img, price, size, discount }) => {
+       
             let cardDiv = document.createElement("div");
             cardDiv.setAttribute("class", "cardDiv");
             let image = document.createElement("img");
             image.addEventListener("click", () => {
                 location.href = "../prod_desc/prod_desc.html"
-                localStorage.setItem("prod-Data", "products?id="+id)
+                localStorage.setItem("prod-Data", "products?id=" + id)
             })
 
             image.src = img;
@@ -101,25 +98,19 @@ function display(productsArray) {
             detailDiv1.append(Brandname, Pname)
             divDetails2.append(Pprice, Bprice, dis)
             let btn = document.createElement("button");
-            btn.setAttribute("class","abidCartP")
+            btn.setAttribute("class", "abidCartP")
             btn.addEventListener("click", () => {
                 alert("Item Added In Cart")
                 gotoCart(id);
             })
             btn.textContent = "ADD TO CART"
-
-
-
             cardDiv.append(image, detailDiv1, divDetails2, sizeDiv, btn);
-
             document.getElementById("abidproductContainer").append(cardDiv)
-
-
-
         })
 }
 
-var arr= JSON.parse(localStorage.getItem("cart"))|| []
+var arr = JSON.parse(localStorage.getItem("cart")) || []
+
 async function gotoCart(id) {
     try {
         let fetchRes = await geturl(`https://myjson.onrender.com/products` + `/${id}`)
@@ -127,16 +118,16 @@ async function gotoCart(id) {
 
         let obj = {
             image_url: fetchRes.img,
-            name:fetchRes.displayName,
+            name: fetchRes.displayName,
             mrp: fetchRes.basePrice,
-            price:fetchRes.price,
+            price: fetchRes.price,
         }
-        console.log(obj)
+        // console.log(obj)
         arr.push(obj)
-        localStorage.setItem("cart",JSON.stringify(arr))
-        
+        localStorage.setItem("cart", JSON.stringify(arr))
+
     } catch (error) {
-console.log(error)
+        console.log(error)
     }
 
 }
@@ -161,39 +152,53 @@ function brand() {
     let discount = disc.value;
     let price = selPrice.value;
 
-// if(gender===""){
-//     url = `https://myjson.onrender.com/products`
-//     fetchProducts();
-// }
 
     if (gender !== "") {
         url += `?cat=${gender}`
 
     }
-    // else {
-    //     if (gender === "") {
-    //         url += `?brand=${brand}`
-    //     }
-    //     else {
-    //         (brand !== "")
-    //         url += `&brand=${brand}`
-    //     }
-    // }
 
     if (brand !== "") {
-        url += `&brand=${brand}`
+        if (gender !== "") {
+            url += `&brand=${brand}`
+        } else {
+            url += `?brand=${brand}`
+        }
     }
 
     if (sizeVal !== "") {
-        url += `&size=${sizeVal}`;
+        if (gender !== '' || brand !== '') {
+            url += `&size=${sizeVal}`;
+        } else {
+            url += `?size=${sizeVal}`;
+        }
+
     }
     if (discount !== "") {
-        url += `&discount_gte=${discount}`
+        if (gender !== '' || brand !== '' || sizeVal !== '') {
+            url += `&discount_gte=${discount}`
+        } else {
+            url += `?discount_gte=${discount}`
+        }
+
     }
     if (price !== "") {
-        url += `&_sort=${price}&_order=asc,desc`
-    }
 
+        if (gender !== '' || brand !== '' || sizeVal !== '' || discount !== '') {
+
+            if (price === "lowToHigh") {
+                url += `&_sort=price&_order=asc`
+            } else {
+                url += `&_sort=price&_order=desc`
+            }
+        } else {
+            if (price === "lowToHigh") {
+                url += `?_sort=price&_order=asc`
+            } else {
+                url += `?_sort=price&_order=desc`
+            }
+        }
+    }
 
     fetchProducts();
     url = `https://myjson.onrender.com/products`
@@ -220,73 +225,70 @@ disc.addEventListener("change", () => {
 let selPrice = document.getElementById("selectPrice");
 selPrice.addEventListener("change", () => {
     brand();
+
 })
 
 
-
-
-let debounce=document.getElementById("goforsrch");
-debounce.addEventListener("click",()=>{
-
-
+let debounce = document.getElementById("goforsrch");
+debounce.addEventListener("click", () => {
     found();
 })
 
 
 
 
-function found(){
-    let inputfromserarch=document.getElementById("homeinput").value;
+function found() {
+    let inputfromserarch = document.getElementById("homeinput").value;
     // localStorage.setItem("navSearch",inputfromserarch);
 
-    if(inputfromserarch==="men"||inputfromserarch==="women"||inputfromserarch==="boy"||inputfromserarch==="saree"||inputfromserarch==="shirt"||inputfromserarch==="pants"){
-        location.href="../products/products.html"
-        localStorage.setItem("prod-Key","products")
-    }else if(inputfromserarch==="mobile"){
-        location.href="../electronics&Mobiles/mobile.html"
-        localStorage.setItem("prod-Key","mobiles")
-    }else if(inputfromserarch==="tab"||inputfromserarch==="camera"||inputfromserarch==="lcd"){
-        location.href="../electronics/electron.html"
+    if (inputfromserarch === "men" || inputfromserarch === "women" || inputfromserarch === "boy" || inputfromserarch === "saree" || inputfromserarch === "shirt" || inputfromserarch === "pants") {
+        location.href = "../products/products.html"
+        localStorage.setItem("prod-Key", "products")
+    } else if (inputfromserarch === "mobile") {
+        location.href = "../electronics&Mobiles/mobile.html"
+        localStorage.setItem("prod-Key", "mobiles")
+    } else if (inputfromserarch === "tab" || inputfromserarch === "camera" || inputfromserarch === "lcd") {
+        location.href = "../electronics/electron.html"
     }
 
 
 }
 
 
-let page=1;
-let pageno=document.getElementById("pageno");
-pageno.textContent=page;
-let prevbtn=document.getElementById("prev");
+let page = 1;
+let pageno = document.getElementById("pageno");
+pageno.textContent = page;
+let prevbtn = document.getElementById("prev");
 
-prevbtn.addEventListener("click",()=>{
-  prev()
+prevbtn.addEventListener("click", () => {
+    prev()
 })
 
-let nextbtn=document.getElementById("next");
+let nextbtn = document.getElementById("next");
 
-nextbtn.addEventListener("click",()=>{
-  next()
+nextbtn.addEventListener("click", () => {
+    next()
 })
 
 
-function prev(){
+function prev() {
 
-    if(page==1) return;
+    if (page == 1) return;
     page--;
-    pageno.textContent=page
-    fetchProductpage(`https://myjson.onrender.com` + `/${pv}`+`?_page=${page}&_limit=8`)
-  
+    pageno.textContent = page
+    fetchProductpage(`https://myjson.onrender.com` + `/${pv}` + `?_page=${page}&_limit=8`)
+
 }
 
-function next(){
+function next() {
 
-page++;
+    page++;
     console.log(page)
-    pageno.textContent=page
-    fetchProductpage(`https://myjson.onrender.com` + `/${pv}`+`?_page=${page}&_limit=8`)
+    pageno.textContent = page
+    fetchProductpage(`https://myjson.onrender.com` + `/${pv}` + `?_page=${page}&_limit=8`)
 }
 
-async function fetchProductpage(url){
+async function fetchProductpage(url) {
     try {
         let fetchData = await geturl(url)
         // console.log(fetchData)
