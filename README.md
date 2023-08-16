@@ -1,4 +1,4 @@
-# Flipkart-like E-commerce Website Clone
+# Flipkart-Website Clone
 Link:
 https://flipkartclone-black.vercel.app/index.html
 
